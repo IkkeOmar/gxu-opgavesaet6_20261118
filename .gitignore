@@ -1,0 +1,14 @@
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.synctex.gz
+*.toc
+
+# Visual audit / render cache (not part of deliverable)
+plots/
+page_*.png
+
+# OS
+.DS_Store
+Thumbs.db
