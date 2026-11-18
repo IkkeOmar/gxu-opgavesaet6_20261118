@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GXU Træningsopgavesæt 6 — Differentialregning</title>
+  <style>
+    :root {
+      --bg: #0B0D17;
+      --card: #13162a;
+      --purple: #7C5CFC;
+      --cyan: #38BDF8;
+      --ink: #E5E7EB;
+      --muted: #9CA3AF;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1rem;
+      line-height: 1.6;
+    }
+    .container { max-width: 640px; width: 100%; }
+    .date {
+      display: inline-block;
+      background: var(--purple);
+      color: white;
+      padding: 0.4rem 0.9rem;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      margin-bottom: 1.5rem;
+    }
+    h1 {
+      font-size: 2.2rem;
+      line-height: 1.15;
+      margin-bottom: 0.8rem;
+      letter-spacing: -0.02em;
+    }
+    h1 .accent { color: var(--cyan); }
+    .by { color: var(--muted); font-size: 1.05rem; margin-bottom: 2rem; }
+    .card {
+      background: var(--card);
+      border: 1px solid rgba(124, 92, 252, 0.25);
+      border-radius: 14px;
+      padding: 1.6rem;
+      margin-bottom: 1.4rem;
+    }
+    .card h2 {
+      font-size: 1.05rem;
+      color: var(--cyan);
+      margin-bottom: 0.7rem;
+      font-weight: 600;
+    }
+    .card ul { list-style: none; padding-left: 0; }
+    .card li {
+      padding: 0.3rem 0;
+      padding-left: 1.4rem;
+      position: relative;
+      color: var(--ink);
+    }
+    .card li::before {
+      content: "→";
+      position: absolute;
+      left: 0;
+      color: var(--purple);
+      font-weight: 700;
+    }
+    .cas {
+      display: inline-block;
+      background: rgba(124, 92, 252, 0.2);
+      border: 1px solid var(--purple);
+      color: var(--cyan);
+      border-radius: 6px;
+      padding: 0 0.35rem;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      vertical-align: middle;
+      margin-left: 0.35rem;
+    }
+    .download-btn {
+      display: block;
+      background: var(--purple);
+      color: white;
+      text-decoration: none;
+      padding: 1rem 1.4rem;
+      border-radius: 12px;
+      text-align: center;
+      font-weight: 700;
+      font-size: 1.05rem;
+      transition: transform 0.1s, background 0.15s;
+      margin-top: 0.5rem;
+    }
+    .download-btn:hover { background: #6b46e5; transform: translateY(-1px); }
+    .download-btn .meta {
+      display: block;
+      font-weight: 400;
+      font-size: 0.85rem;
+      opacity: 0.85;
+      margin-top: 0.2rem;
+    }
+    .footer { margin-top: 2.5rem; text-align: center; color: var(--muted); font-size: 0.85rem; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <span class="date">18. november 2026</span>
+    <h1>GXU Træningsopgavesæt <span class="accent">6</span></h1>
+    <p class="by">Fra Omar og Karoline ☺ — differentialregning for 1.–2. g</p>
+
+    <div class="card">
+      <h2>Indhold — 8 sektioner, 52 opgaver</h2>
+      <ul>
+        <li><strong>1. Hvad er en afledning?</strong> — definitionen, sekant og tangent, grænseværdi (6 opgaver)</li>
+        <li><strong>2. Afledningsregler</strong> — sum, konstant, potens, eksponential, logaritme, produkt, kvotient (7 opgaver)</li>
+        <li><strong>3. Kæderegelen</strong> — sammensætninger og lag for lag (7 opgaver)</li>
+        <li><strong>4. Tangent og normal</strong> — tangentlinje, normal, skæringspunkter (7 opgaver)</li>
+        <li><strong>5. Monotoniforhold</strong> — signskema for f′ (6 opgaver)</li>
+        <li><strong>6. Ekstrema</strong> — stationære punkter, test med f″ (6 opgaver)</li>
+        <li><strong>7. Optimering</strong> — den 5-trins metode og otte modelleringsopgaver (8 opgaver)</li>
+        <li><strong>8. Anvendelser</strong> — hældningstal, lineær approksimation, vækst og procent, hastighed og temperatur (5 opgaver)</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Sådan bruger du sættet</h2>
+      <ul>
+        <li>Hver sektion starter med en regel og et udregnet eksempel</li>
+        <li>Opgaver med <span class="cas">CAS</span> må løses med hjælpemidler (GeoGebra eller TI-Nspire) — resten regnes i hånden, som i den skriftlige prøve</li>
+        <li>Alle figurer er vektortegninger i pgfplots/TikZ — skarpt i udskrift</li>
+        <li>Facit med alle 52 svar ligger bagerst i to kolonner</li>
+      </ul>
+    </div>
+
+    <a class="download-btn" href="GXU-traeningsopgaver-6.pdf" download>
+      Download PDF (11 sider, A4)
+      <span class="meta">≈ 121 KB · LaTeX-kompileret med pgfplots-grafik</span>
+    </a>
+
+    <p class="footer">Opgavesæt 6 · 18. november 2026</p>
+  </div>
+</body>
+</html>
